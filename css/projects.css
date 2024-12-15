@@ -1,0 +1,130 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    color: white;
+    font-size: 25px;
+    background-image: url('/resources/g32K.gif');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    
+}
+.container1{
+  width: 900px;
+  height: 400px;
+  max-width: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(20px);
+  padding: 10px;
+  margin: 0 auto;
+}
+.container2{
+  width: 900px;
+  height: 400px;
+  max-width: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(20px);
+  padding: 10px;
+  margin: 0 auto;
+}
+.container3{
+    width: 900px;
+    height: 400px;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(20px);
+    padding: 10px;
+    margin: 0 auto;
+}
+.container4{
+    width: 900px;
+    height: 400px;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(20px);
+    padding: 10px;
+    margin: 0 auto;
+}
+.lstcontainer{
+    width: 300px;
+    height: 100px;
+    max-width: 400px;
+    display: flex;
+    font-family: 'Mansalva';
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid rgb(0, 60, 255);
+    border-radius: 25px;
+    box-shadow: 0 0 10px 5px rgb(59, 86, 160);
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(20px);
+    padding: 10px;
+    margin: 0 auto;
+}
+
+footer{
+    background: rgba(255, 255, 255, 0);
+    font-size: 30px;
+    color: white;
+    backdrop-filter: blur(10px);
+    padding: 10px;
+    text-align: center;
+    border-radius: 15px;
+    margin-top: 600px;
+}
+
+.anton-sc-regular {
+  font-family: "Anton SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.righteous-regular {
+  font-family: "Righteous", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.indie-flower-regular {
+    font-family: "Indie Flower", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+.lobster-regular {
+    font-family: "Lobster", cursive;
+    font-weight: 400;
+    font-style: normal;
+}  
+.barriecito-regular {
+    font-family: "Barriecito", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+.jaro-<uniquifier> {
+  font-family: "Jaro", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+  
