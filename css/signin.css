@@ -1,7 +1,7 @@
 @font-face {
-    src: url(/resources/Kbfunhouse-K8Bo.ttf);
+    src: url(../resources/Kbfunhouse-K8Bo.ttf);
     font-family: 'Kbfunhouse';
-    src: url(/resources/Crazy\ Jazzy.ttf);
+    src: url(../resources/Crazy\ Jazzy.ttf);
     font-family: 'Crazy Jazzy';
 }
 *{
@@ -27,7 +27,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('/resources/tree.gif');
+    background-image: url('../resources/tree.gif');
     background-size: cover; 
     background-repeat: no-repeat; 
     background-position: center; 

@@ -1,7 +1,7 @@
 @font-face {
-    src: url(/resources/Kbfunhouse-K8Bo.ttf);
+    src: url(../resources/Kbfunhouse-K8Bo.ttf);
     font-family: 'Kbfunhouse';
-    src: url(/resources/Crazy\ Jazzy.ttf);
+    src: url(../resources/Crazy\ Jazzy.ttf);
     font-family: 'Crazy Jazzy';
 }
 *{
@@ -27,7 +27,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('/resources/tumblr_7f7ab9a460d4f053e8f0507710295866_acfcba83_540.gif');
+    background-image: url('../resources/tumblr_7f7ab9a460d4f053e8f0507710295866_acfcba83_540.gif');
     background-size: cover; 
     background-repeat: no-repeat; 
     background-position: center; 

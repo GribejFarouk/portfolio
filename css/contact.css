@@ -4,7 +4,7 @@ html, body {
 }
 
 body{
-    background-image: url('/resources/5m5h.gif');
+    background-image: url('../resources/5m5h.gif');
     background-size: cover; 
     background-repeat: no-repeat; 
     background-position: center; 

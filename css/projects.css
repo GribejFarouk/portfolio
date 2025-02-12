@@ -4,7 +4,7 @@
 body{
     color: white;
     font-size: 25px;
-    background-image: url('/resources/g32K.gif');
+    background-image: url('../resources/g32K.gif');
     background-size: cover; 
     background-repeat: no-repeat; 
     background-position: center; 
