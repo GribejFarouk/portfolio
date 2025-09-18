@@ -1,0 +1,111 @@
+/* CSS rules to make the website responsive */
+
+/* For tablets and smaller desktops */
+@media (max-width: 992px) {
+    .container1, .container2, .container3 {
+        width: 90%;
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+
+    .container2 img, .container3 img {
+        height: auto;
+        max-width: 80%;
+        margin-bottom: 15px;
+    }
+
+    #welcome-heading {
+        font-size: 60px;
+    }
+
+    .circle-image {
+        width: 180px;
+        height: 180px;
+    }
+
+    footer {
+        margin-top: 100px;
+    }
+
+    /* About page specific */
+    .masthead-heading {
+        font-size: 4rem;
+    }
+
+    /* Projects page specific */
+    .container1 img, .container2 img, .container3 img, .container4 img {
+        float: none;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+    }
+}
+
+/* For mobile phones */
+@media (max-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+
+    #welcome-heading {
+        font-size: 40px;
+    }
+
+    .button {
+        font-size: 18px;
+        width: 120px;
+        padding: 0.8rem;
+    }
+
+    .btn {
+        padding: 0.8rem;
+        width: 7rem;
+    }
+
+    .circle-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .container1, .container2, .container3 {
+        padding: 15px;
+    }
+
+    footer {
+        font-size: 16px;
+    }
+
+    /* About page specific */
+    .masthead-intro {
+        font-size: 1.2rem;
+    }
+    .masthead-heading {
+        font-size: 3rem;
+    }
+    .circle-image {
+        width: 120px;
+        height: 120px;
+    }
+    .introduction-section p, .location-section p, .questions-section p {
+        font-size: 1rem;
+    }
+    .questions-section h2 {
+        font-size: 1.5rem;
+    }
+
+    /* Projects page specific */
+    h1 {
+        font-size: 2.5rem;
+    }
+    h2 {
+        font-size: 1.8rem;
+    }
+    h3 {
+        font-size: 1.3rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+}

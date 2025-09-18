@@ -5,14 +5,9 @@ body{
     color: white;
     text-align: center;
     font-size: 25px;
-    background-image: url('../resources/xK.gif');
-    background-size: cover; 
-    background-repeat: no-repeat; 
-    background-position: center;   
 }
 #welcome-heading{
-    color: rgb(245, 180, 0);
-    -webkit-text-stroke: 1px black;
+    color: rgb(255, 255, 255);
     font-size: 80px;
     text-align: center;
 }
@@ -27,29 +22,29 @@ body{
   font-size: 30px;
   font-family: 'lobster-regular';
   border: none;
-  background-color: rgb(173, 136, 198);
+  background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
   width: 180px;
   border-radius: 10px
 }
 .button:hover{
   cursor: pointer;
-  background-color: rgb(173, 136, 198);
+  background-color: rgb(0, 0, 0);
   color: white;
 }
 #hehe2{
   color: white;
-  font-family: barriecito;
-  text-shadow: 0 0 10px rgb(253, 43, 225), 0 0 20px rgb(160, 119, 160), 0 0 30px rgb(255, 0, 221);
+  font-family: anton-sc-regular;
 }
 #hehe3{
   font-family:Righteous ;
-   color: rgb(245, 180, 0);
+   color: rgb(255, 255, 255);
 
 }
 #heeh2{
     font-family: Anton SC;
     font-size: 20px;
+    color: rgb(255, 255, 255);
 }
 .container1{
     width: 500px;
@@ -60,7 +55,7 @@ body{
     flex-direction: column;
     border-radius: 50px;
     background: rgba(255, 255, 255, 0);
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(10px);
     padding: 10px;
     margin: 0 auto;
 }
@@ -74,7 +69,7 @@ body{
   flex-direction: row;
   border-radius: 50px;
   background: rgba(255, 255, 255, 0);
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(10px);
   padding: 10px;
   margin: 0 auto;
   
@@ -89,26 +84,11 @@ body{
   flex-direction: row;
   border-radius: 50px;
   background: rgba(255, 255, 255, 0);
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(10px);
   padding: 10px;
   margin: 0 auto;
 }
-.container4{
-  width: 650px;
-  height: 200px;
-  max-width: 700px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  border-radius: 50px;
-  border: 2px solid wheat;
-  box-shadow: 0 0 10px 5px rgb(160, 158, 59);
-  background: rgba(255, 255, 255, 0);
-  backdrop-filter: blur(20px);
-  padding: 10px;
-  margin: 0 auto;
-}
+
 /* BUTTONS */
 
 .btn-container {
@@ -178,6 +158,19 @@ footer{
     margin-top: 600px;
 }
 
+#bg-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    object-fit: cover;
+    background-size: cover;
+}
+
 .anton-sc-regular {
   font-family: "Anton SC", sans-serif;
   font-weight: 400;
@@ -204,10 +197,4 @@ footer{
     font-weight: 400;
     font-style: normal;
   }
-.jaro-<uniquifier> {
-  font-family: "Jaro", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-  
+
