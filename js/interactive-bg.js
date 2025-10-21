@@ -1,18 +1,13 @@
 // Interactive background script
-document.addEventListener("DOMContentLoaded", function() {
+window.addEventListener("load", function() {
+    console.log("Interactive background initializing...");
     // Create canvas element
     const canvas = document.createElement('canvas');
     canvas.id = 'interactive-bg';
     document.body.insertBefore(canvas, document.body.firstChild);
     
-    // Style the canvas
-    canvas.style.position = 'fixed';
-    canvas.style.top = '0';
-    canvas.style.left = '0';
-    canvas.style.width = '100%';
-    canvas.style.height = '100%';
-    canvas.style.zIndex = '-101'; // Behind the video background
-    canvas.style.pointerEvents = 'none'; // Don't interfere with clicks
+    // We'll use CSS for most styling
+    canvas.style.background = 'rgba(0, 0, 0, 0.4)'; // Darker background for better contrast
     
     // Get the canvas context
     const ctx = canvas.getContext('2d');
@@ -31,13 +26,13 @@ document.addEventListener("DOMContentLoaded", function() {
     
     // Particle properties
     const particles = [];
-    const particleCount = 100;
-    const particleBaseSize = 2;
-    const particleAddedSize = 1;
+    const particleCount = 200; // Even more particles
+    const particleBaseSize = 4; // Even larger base size
+    const particleAddedSize = 3; // More size variation
     const particleBaseSpeed = 1;
-    const particleVariableSpeed = 0.5;
-    const connectionDistance = 150;
-    const mouseRadius = 200;
+    const particleVariableSpeed = 1; // Faster movement
+    const connectionDistance = 200; // Longer connections
+    const mouseRadius = 250; // Larger mouse influence
     
     // Mouse tracking
     let mouse = {
@@ -60,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 size: Math.random() * particleAddedSize + particleBaseSize,
                 speedX: Math.random() * particleVariableSpeed * 2 - particleVariableSpeed,
                 speedY: Math.random() * particleVariableSpeed * 2 - particleVariableSpeed,
-                color: 'rgba(255, 255, 255, ' + (Math.random() * 0.5 + 0.2) + ')'
+                color: 'rgba(255, 255, 255, ' + (Math.random() * 0.5 + 0.5) + ')' // Maximum visibility
             });
         }
     }
@@ -119,7 +114,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     // The closer the particles, the more opaque the line
                     let opacity = 1 - (distance / connectionDistance);
                     ctx.beginPath();
-                    ctx.strokeStyle = 'rgba(255, 255, 255, ' + opacity * 0.2 + ')';
+                    ctx.strokeStyle = 'rgba(255, 255, 255, ' + opacity * 0.7 + ')'; // Highly visible connections
                     ctx.lineWidth = 1;
                     ctx.moveTo(particles[i].x, particles[i].y);
                     ctx.lineTo(particles[j].x, particles[j].y);
@@ -139,4 +134,5 @@ document.addEventListener("DOMContentLoaded", function() {
     // Initialize
     initParticles();
     animate();
+    console.log("Interactive background started successfully!");
 });
