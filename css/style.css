@@ -10,10 +10,10 @@ body{
 }
 
 #main-content {
-    padding-top: 120vh; /* Initial padding to start content after fullscreen */
+    padding-top: 100vh; /* Initial padding to start content after fullscreen */
     position: relative;
     z-index: 5;
-    transition: padding-top 0.5s ease;
+    transition: padding-top 1s ease; /* Slowed down from 0.5s to 1s */
 }
 #welcome-heading{
     color: rgb(255, 255, 255);
@@ -154,7 +154,7 @@ body{
     z-index: 10;
     background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(5px);
-    transition: all 0.5s ease;
+    transition: all 1s ease; /* Slowed down from 0.5s to 1s */
 }
 
 .welcome-content {
@@ -166,7 +166,7 @@ body{
     margin-bottom: 30px;
     transform: translateY(0);
     opacity: 1;
-    transition: all 0.5s ease;
+    transition: all 1s ease; /* Slowed down from 0.5s to 1s */
     text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
 }
 
@@ -178,7 +178,7 @@ body{
 
 .scroll-arrow {
     font-size: 30px;
-    animation: bounce 2s infinite;
+    animation: bounce 3s infinite; /* Slowed down from 2s to 3s */
 }
 
 @keyframes bounce {
@@ -193,48 +193,12 @@ body{
     }
 }
 
-/* Hidden initial state for header welcome */
-#header-welcome {
-    opacity: 0;
-    font-size: 0;
-    transition: all 0.5s ease;
+.scroll-arrow {
+    font-size: 30px;
+    animation: bounce 3s infinite; /* Slowed down from 2s to 3s */
 }
 
-/* Header when scrolled */
-header.scrolled #header-welcome {
-    opacity: 1;
-    font-size: 60px;
-}
-
-/* Fixed header */
-header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(10px);
-    padding: 10px;
-    text-align: center;
-    border-radius: 0;
-    margin-bottom: 0;
-    z-index: 20;
-    transition: all 0.5s ease;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 30px;
-    transform: translateY(-100%); /* Initially hidden */
-}
-
-header.scrolled {
-    transform: translateY(0); /* Show header when scrolled */
-}
-
-.nav-buttons {
-    display: flex;
-    gap: 15px;
-}
+/* Remove header styles since we're not using it anymore */
 .circle-image {
   width: 220px;
   height: 220px;
@@ -242,15 +206,58 @@ header.scrolled {
   object-fit: cover; 
 }
 
-footer{
-    background: rgba(255, 255, 255, 0);
+footer {
+    background: rgba(255, 255, 255, 0.1);
     font-size: 30px;
     color: white;
     backdrop-filter: blur(10px);
-    padding: 10px;
+    padding: 20px;
     text-align: center;
     border-radius: 15px;
     margin-top: 600px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.footer-link {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-family: 'Anton SC', sans-serif;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.footer-link:hover {
+    color: #f0f0f0;
+    transform: scale(1.05);
+}
+
+.footer-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.footer-link:hover::after {
+    width: 100%;
 }
 
 #bg-video {
