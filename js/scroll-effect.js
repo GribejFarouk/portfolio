@@ -46,14 +46,14 @@ document.addEventListener('DOMContentLoaded', function() {
                         }
                     } else {
                         welcomeFullscreen.style.visibility = 'visible';
-                        mainContent.style.paddingTop = '100vh';
+                        mainContent.style.paddingTop = '120vh'; // Updated to match CSS
                     }
                 } else {
                     // Reset when scrolled back to top
                     welcomeFullscreen.style.opacity = 1;
                     welcomeFullscreen.style.transform = 'scale(1)';
                     welcomeFullscreen.style.visibility = 'visible';
-                    mainContent.style.paddingTop = '100vh';
+                    mainContent.style.paddingTop = '120vh'; // Updated to match CSS
                     
                     if (container1) {
                         container1.style.transform = 'translateY(0)';

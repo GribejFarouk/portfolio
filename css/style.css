@@ -15,15 +15,35 @@ body{
 }
 
 #main-content {
-    padding-top: 100vh; /* Initial padding to start content after fullscreen */
+    padding-top: 120vh; /* Increased from 100vh to 120vh for more initial space */
     position: relative;
     z-index: 5;
     transition: padding-top 2s ease-out; /* Much slower transition with ease-out for smoother effect */
 }
 
 .spacer {
-    height: 120px; /* Additional space before the first container */
+    height: 300px; /* Much more space before the first container */
     width: 100%;
+}
+
+.spacer-small {
+    height: 100px;
+    width: 100%;
+}
+
+.scroll-indicator-bottom {
+    font-size: 24px;
+    opacity: 0.7;
+    font-family: "Anton SC", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 20px;
+    animation: fade 3s infinite alternate;
+}
+
+@keyframes fade {
+    from { opacity: 0.3; }
+    to { opacity: 0.8; }
 }
 #welcome-heading{
     color: rgb(255, 255, 255);
@@ -76,7 +96,7 @@ body{
     background: rgba(255, 255, 255, 0);
     backdrop-filter: blur(10px);
     padding: 10px;
-    margin: 150px auto 0; /* Added 150px top margin to increase space */
+    margin: 250px auto 0; /* Increased to 250px top margin for even more space */
     position: relative; /* Enable positioning */
     transition: transform 1.5s ease; /* Very slow transition for smooth movement */
     will-change: transform; /* Optimize for animation */
