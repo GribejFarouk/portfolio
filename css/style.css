@@ -1,19 +1,24 @@
 *{
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth; /* Enable smooth scrolling for the entire page */
+}
+
 body{
     color: white;
     text-align: center;
     font-size: 25px;
     margin: 0;
     padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 #main-content {
     padding-top: 100vh; /* Initial padding to start content after fullscreen */
     position: relative;
     z-index: 5;
-    transition: padding-top 1s ease; /* Slowed down from 0.5s to 1s */
+    transition: padding-top 2s ease-out; /* Much slower transition with ease-out for smoother effect */
 }
 #welcome-heading{
     color: rgb(255, 255, 255);
@@ -67,6 +72,9 @@ body{
     backdrop-filter: blur(10px);
     padding: 10px;
     margin: 0 auto;
+    position: relative; /* Enable positioning */
+    transition: transform 1.5s ease; /* Very slow transition for smooth movement */
+    will-change: transform; /* Optimize for animation */
 }
 .container2{
   width: 900px;
@@ -154,7 +162,7 @@ body{
     z-index: 10;
     background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(5px);
-    transition: all 1s ease; /* Slowed down from 0.5s to 1s */
+    transition: all 2s ease-in-out; /* Even slower with ease-in-out for smoother effect */
 }
 
 .welcome-content {
