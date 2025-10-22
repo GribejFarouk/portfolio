@@ -6,8 +6,8 @@ window.addEventListener("load", function() {
     canvas.id = 'interactive-bg';
     document.body.insertBefore(canvas, document.body.firstChild);
     
-    // We'll use CSS for most styling
-    canvas.style.background = 'rgba(0, 0, 0, 0.4)'; // Darker background for better contrast
+    // Set transparent background to let the black background show through
+    canvas.style.background = 'transparent';
     
     // Get the canvas context
     const ctx = canvas.getContext('2d');
@@ -26,12 +26,12 @@ window.addEventListener("load", function() {
     
     // Particle properties
     const particles = [];
-    const particleCount = 200; // Even more particles
-    const particleBaseSize = 4; // Even larger base size
-    const particleAddedSize = 3; // More size variation
-    const particleBaseSpeed = 1;
-    const particleVariableSpeed = 1; // Faster movement
-    const connectionDistance = 200; // Longer connections
+    const particleCount = 250; // Increased number of particles
+    const particleBaseSize = 3; // Base size
+    const particleAddedSize = 2; // Size variation
+    const particleBaseSpeed = 0.8; // Slightly slower for more graceful movement
+    const particleVariableSpeed = 0.8;
+    const connectionDistance = 220; // Longer connections
     const mouseRadius = 250; // Larger mouse influence
     
     // Mouse tracking
@@ -55,7 +55,8 @@ window.addEventListener("load", function() {
                 size: Math.random() * particleAddedSize + particleBaseSize,
                 speedX: Math.random() * particleVariableSpeed * 2 - particleVariableSpeed,
                 speedY: Math.random() * particleVariableSpeed * 2 - particleVariableSpeed,
-                color: 'rgba(255, 255, 255, ' + (Math.random() * 0.5 + 0.5) + ')' // Maximum visibility
+                // Create particles with slightly different colors (blue/purple tints)
+                color: `rgba(${Math.floor(220 + Math.random() * 35)}, ${Math.floor(220 + Math.random() * 35)}, ${Math.floor(255)}, ${Math.random() * 0.4 + 0.6})`
             });
         }
     }
@@ -114,7 +115,8 @@ window.addEventListener("load", function() {
                     // The closer the particles, the more opaque the line
                     let opacity = 1 - (distance / connectionDistance);
                     ctx.beginPath();
-                    ctx.strokeStyle = 'rgba(255, 255, 255, ' + opacity * 0.7 + ')'; // Highly visible connections
+                    // Connection lines with subtle blue/purple tint
+                    ctx.strokeStyle = `rgba(${Math.floor(230 + Math.random() * 25)}, ${Math.floor(230 + Math.random() * 25)}, 255, ${opacity * 0.7})`;
                     ctx.lineWidth = 1;
                     ctx.moveTo(particles[i].x, particles[i].y);
                     ctx.lineTo(particles[j].x, particles[j].y);
